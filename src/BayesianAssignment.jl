@@ -1,5 +1,7 @@
 module BayesianAssignment
 
+import CSV
+
 using Reexport: @reexport
 @reexport using AlgebraOfGraphics
 @reexport using Books

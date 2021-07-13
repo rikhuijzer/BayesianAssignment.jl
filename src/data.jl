@@ -16,23 +16,46 @@ end
 function commandos_data()
     n = 110
     group = fill("commandos", n)
-    N = generate_samples(111.9, 16.7, n)
-    E = generate_samples(161.6, 12.8, n)
-    DataFrame(; group, N, E)
+    neuroticism = generate_samples(111.9, 16.7, n)
+    extraversion = generate_samples(161.6, 12.8, n)
+    DataFrame(; group, neuroticism, extraversion)
 end
 
 function civilians_data()
     n = 275
     group = fill("civlians", n)
-    N = generate_samples(130.9, 37.2, n)
-    E = generate_samples(157.4, 33.1, n)
-    DataFrame(; group, N, E)
+    neuroticism = generate_samples(130.9, 37.2, n)
+    extraversion = generate_samples(157.4, 33.1, n)
+    DataFrame(; group, neuroticism, extraversion)
+end
+
+"""
+    add_missing!(df)
+
+Real data contains missing values, so we add a few.
+At least the second value is also `missing`, so that it is visible for the reader.
+"""
+function add_missing!(df)
+    rng = StableRNG(1)
+    n = nrow(df)
+    n_indices = round(Int, n/10)
+    indices = [2; rand(rng, 1:n, n_indices)]
+    allowmissing!(df, [:neuroticism, :extraversion])
+    for i in indices
+        # Missing can be in :neuroticism or :extraversion.
+        # To make the filter a bit more difficult.
+        col = rand(rng, [:neuroticism, :extraversion])
+        df[i, col] = missing
+    end
 end
 
 function dataset()
     df = vcat(commandos_data(), civilians_data())
     df[!, :participant] = 1:nrow(df)
     select!(df, :participant, :)
+    add_missing!(df)
+    # Using missingstring because it's non-trivial to filter empty cells.
+    CSV.write("data.csv", df; missingstring="-1")
     df
 end
 
@@ -41,7 +64,7 @@ function stacked_dataset()
 
     variable_name = :domain
     value_name = :score
-    sdf = stack(df, [:N, :E]; variable_name, value_name)
+    sdf = stack(df, [:neuroticism, :extraversion]; variable_name, value_name)
 end
 
 function first_and_last_few_rows(df)
