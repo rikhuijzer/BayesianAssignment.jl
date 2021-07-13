@@ -1,4 +1,4 @@
-println("Starting to build PDF. This may take a while.")
+println("Starting to generate data and PDF. This may take a while.")
 
 import Pkg
 
@@ -8,4 +8,4 @@ Pkg.instantiate()
 
 using BayesianAssignment
 
-build_pdf()
+build()

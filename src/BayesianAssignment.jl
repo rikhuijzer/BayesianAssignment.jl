@@ -10,12 +10,13 @@ using Reexport: @reexport
 @reexport using Random
 @reexport using StableRNGs
 
-export build_pdf
+export build
+
 include("data.jl")
 export dataset, first_and_last_few_rows, generate_samples
 include("plots.jl")
 
-function build_pdf()
+function build()
     println("Generating content")
     Books.gen(; fail_on_error=true)
     println("Building pdf")
