@@ -1,0 +1,25 @@
+---
+title: Bayesian assignment
+subtitle: "Bayes factors assignment for the statistical solutions to research problems in psychology course."
+book: false
+author: Rik Huijzer
+html-license: <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+pdf-footer: "\\url{https://github.com/juliadatascience/juliadatascience}"
+tex-license: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+lang: en-US
+geometry:
+  - top=20mm
+  - left=24mm
+  - right=24mm
+  - bottom=28mm
+number-sections: true
+secPrefix: Section
+figPrefix: Figure
+tblPrefix: Table
+titlepage: true
+linkReferences: true
+link-citations: true
+colorlinks: true
+linkcolor: blue
+---
+

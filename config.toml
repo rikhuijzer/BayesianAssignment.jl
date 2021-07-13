@@ -1,0 +1,14 @@
+[projects]
+
+  [projects.default]
+  contents = [
+    "assignment",
+    "references"
+  ]
+  port = 8008
+
+  # Extra directories to be copied.
+  extra_directories = [
+  ]
+
+  output_filename = "bayesian-assignment"
