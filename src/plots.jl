@@ -11,6 +11,6 @@ function plot_density()
 
     dens = data(sdf) * mapping(:score, color=:group, row=:domain) * density()
     # Doesn't work for some reason.
-    axis = (; ylabel="")
+    # axis = (; ylabel="")
     draw(dens)
 end
