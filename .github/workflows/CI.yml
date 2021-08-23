@@ -34,7 +34,7 @@ jobs:
         run: julia --project -e 'using Pkg; Pkg.instantiate();
                 using Books; Books.install_dependencies()'
 
-      - run: julia --project -e 'using JDS; JDS.build()'
+      - run: julia --project -e 'using BayesianAssignment; BayesianAssignment.build()'
 
       - name: Deploy to secondary branch
         if: ${{ github.event_name != 'pull_request' }}
