@@ -2,9 +2,11 @@
 
 Rik Huijzer and Don van Ravenzwaaij.
 
-This document describes the Bayes factors assignment for the _statistical solutions to research problems in psychology_ course.
+This document describes the Bayes factors assignment for the course: _statistical solutions to research problems in psychology_.
 
-_Version: August, 2021._
+```jl
+BayesianAssignment.show_version()
+```
 
 ## Background
 
@@ -38,20 +40,24 @@ The synthetic data provided with this assignment consists of the personality sco
 The first and last few rows of the dataset are shown in @tbl:dataset.
 
 ```jl
-caption = "First and last few rows of the dataset."
-label = "dataset"
-data = first_and_last_few_rows(dataset())
-Options(data; caption, label)
+let
+    caption = "First and last few rows of the dataset."
+    label = "dataset"
+    data = first_and_last_few_rows(dataset())
+    Options(data; caption, label)
+end
 ```
 
 To give you a bit of an intuition about this dataset, we visualize it by plotting all the points, see @fig:not_so_useful.
 This figure is a bit misleading since there could be many points lying on top of each other.
 
 ```jl
-fg = BayesianAssignment.plot_points()
-caption = "A simple but possibly misleading visualization of the data."
-label = "not_so_useful"
-Options(fg; caption, label)
+let
+    fg = BayesianAssignment.plot_points()
+    caption = "A simple but possibly misleading visualization of the data."
+    label = "not_so_useful"
+    Options(fg; caption, label)
+end
 ```
 
 So, instead, we can also visualize it by estimating the distribution via a, so called, kernel density estimator (@fig:kde).
@@ -69,9 +75,10 @@ Options(fg; caption, label)
     Clean up the data by using the pass-through filter in JASP.
     Report what formula you use in the filter and how many rows remain.
     Note that, to apply multiple filters at the same time, you can use something like
-    $( \text{neuroticism} \dots ) \land ( \dots )$.
+    (neuroticism ... ) ∧ ( ... ).
 
-1. _[2 pt]_ Create boxplots for neuroticism and extraversion while also splitting the data up in groups. Add the plots to your report.
+1. _[2 pt]_ Create boxplots for neuroticism and extraversion while also splitting the data up in groups.
+    Add the plots to your report.
 
 1. _[3 pt]_ Report results for doing traditional inference tests.
     Think about the design, report what test you are using.

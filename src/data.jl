@@ -1,3 +1,5 @@
+show_version() = "_Version:_ $(today()).\n"
+
 """
     generate_samples(mean, sd, n)
 
@@ -75,3 +77,4 @@ function first_and_last_few_rows(df)
     middle = DataFrame(pairs...)
     vcat(firsts, middle, lasts)
 end
+
