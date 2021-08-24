@@ -21,6 +21,7 @@ include("plots.jl")
 function build()
     println("Generating content")
     fail_on_error = true
+    dataset()
     Books.gen(; fail_on_error)
     Books.build_all(; fail_on_error)
 end

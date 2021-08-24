@@ -8,7 +8,7 @@ This document describes the Bayes factors assignment for the course: _statistica
 BayesianAssignment.show_version()
 ```
 
-## Background
+## Background {#sec:background}
 
 Throughout the course of your psychology cirriculum, you have been exposed to Null Hypothesis Significance Testing (NHST) on numerous occasions.
 NHST is arguably the golden standard in inferential statistics in psychology, but it does not come without its shortcomings.
@@ -36,7 +36,7 @@ Commandos are elite military troops, so they are required to perform well in ext
 Therefore, we expect that commandos are less neurotic (sensitive/nervous) than civilians [@mcdonald1990training; @lee2011prospective; @jackson2012military].
 Also, we expect that commandos are more extravert (outgoing/energetic) than civilians [@jackson2012military].
 
-The synthetic data provided with this assignment consists of the personality scores of commandos and civlians on neuroticism (N) and extraversion (E).
+The synthetic data provided with this assignment consists of the personality scores of commandos and civilians on neuroticism (N) and extraversion (E).
 The first and last few rows of the dataset are shown in @tbl:dataset.
 
 ```jl
@@ -47,6 +47,9 @@ let
     Options(data; caption, label)
 end
 ```
+
+You can download the data via: \
+<https://rikhuijzer.github.io/BayesianAssignment.jl/data.csv>
 
 To give you a bit of an intuition about this dataset, we visualize it by plotting all the points, see @fig:not_so_useful.
 This figure is a bit misleading since there could be many points lying on top of each other.
@@ -75,7 +78,7 @@ Options(fg; caption, label)
     Clean up the data by using the pass-through filter in JASP.
     Report what formula you use in the filter and how many rows remain.
     Note that, to apply multiple filters at the same time, you can use something like
-    (neuroticism ... ) ∧ ( ... ).
+    $(\text{neuroticism} \cdots ) \land ( \cdots )$.
 
 1. _[2 pt]_ Create boxplots for neuroticism and extraversion while also splitting the data up in groups.
     Add the plots to your report.

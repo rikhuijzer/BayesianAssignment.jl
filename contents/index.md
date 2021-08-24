@@ -7,4 +7,4 @@ This file is only included on the website.
 Welcome!
 This website is also available as [**PDF**](/bayesian-assignment.pdf){target="_blank"}.
 
-See @sec:intro for more information.
+See @sec:intro for more information or jump straight to the assignment in @sec:background.

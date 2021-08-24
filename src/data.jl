@@ -25,7 +25,7 @@ end
 
 function civilians_data()
     n = 275
-    group = fill("civlians", n)
+    group = fill("civilians", n)
     neuroticism = generate_samples(130.9, 37.2, n)
     extraversion = generate_samples(157.4, 33.1, n)
     DataFrame(; group, neuroticism, extraversion)
