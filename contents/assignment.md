@@ -1,4 +1,4 @@
-# Introduction
+# Introduction {#sec:intro}
 
 Rik Huijzer and Don van Ravenzwaaij.
 

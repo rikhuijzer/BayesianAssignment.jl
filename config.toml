@@ -11,4 +11,6 @@
   extra_directories = [
   ]
 
+  online_url_prefix = "/BayesianAssignment.jl"
+
   output_filename = "bayesian-assignment"
