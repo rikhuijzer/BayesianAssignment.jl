@@ -4,6 +4,8 @@ Rik Huijzer and Don van Ravenzwaaij.
 
 This document describes the Bayes factors assignment for the course: _statistical solutions to research problems in psychology_.
 
+The source code is available at <https://github.com/rikhuijzer/BayesianAssignment.jl>.
+
 ```jl
 BayesianAssignment.show_version()
 ```
