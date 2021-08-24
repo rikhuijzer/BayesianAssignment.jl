@@ -57,7 +57,8 @@ function dataset()
     select!(df, :participant, :)
     add_missing!(df)
     # Using missingstring because it's non-trivial to filter empty cells.
-    CSV.write("data.csv", df; missingstring="-1")
+    data_path = joinpath(Books.BUILD_DIR, "data.csv")
+    CSV.write(data_path, df; missingstring="-1")
     df
 end
 
