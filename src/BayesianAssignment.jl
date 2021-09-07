@@ -23,7 +23,10 @@ function build()
     fail_on_error = true
     dataset()
     Books.gen(; fail_on_error)
-    Books.build_all(; fail_on_error)
+    extra_head = """
+        <script src="https://cdn.usefathom.com/script.js" data-site="WYKYRAWQ" defer></script>
+        """
+    Books.build_all(; extra_head, fail_on_error)
 end
 
 end # module
