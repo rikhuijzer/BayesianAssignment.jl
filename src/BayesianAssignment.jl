@@ -1,15 +1,19 @@
 module BayesianAssignment
 
 import CSV
+import CairoMakie
+import Makie
 
 using Reexport: @reexport
-@reexport using AlgebraOfGraphics
-@reexport using Books
-@reexport using DataFrames
-@reexport using Dates
-@reexport using Distributions
-@reexport using Random
-@reexport using StableRNGs
+@reexport begin
+using AlgebraOfGraphics
+using Books
+using DataFrames
+using Dates
+using Distributions
+using Random
+using StableRNGs
+end
 
 export build
 

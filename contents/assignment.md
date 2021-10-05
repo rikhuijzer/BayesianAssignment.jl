@@ -1,16 +1,4 @@
-# Introduction {#sec:intro}
-
-Rik Huijzer and Don van Ravenzwaaij.
-
-This document describes the Bayes factors assignment for the course: _statistical solutions to research problems in psychology_.
-
-The source code is available at <https://github.com/rikhuijzer/BayesianAssignment.jl>.
-
-```jl
-BayesianAssignment.show_version()
-```
-
-## Background {#sec:background}
+# Background {#sec:background}
 
 Throughout the course of your psychology cirriculum, you have been exposed to Null Hypothesis Significance Testing (NHST) on numerous occasions.
 NHST is arguably the golden standard in inferential statistics in psychology, but it does not come without its shortcomings.
@@ -31,7 +19,7 @@ The assignment in this module asks you to analyze this dataset yourself.
 You will conduct both conventional and Bayesian inference and write a results section that showcases your findings.
 You will not only report that an effect is there, but also that an effect is **not** there.
 
-## Assignment
+# Assignment {#sec:assignment}
 
 In this assignment, we will look into the differences in the Big Five personality traits of Dutch special operations forces (henceforth, commandos) versus the general population.
 Commandos are elite military troops, so they are required to perform well in extreme mental and physical conditions.
@@ -75,6 +63,8 @@ caption = "Estimation of the distributions."
 label = "kde"
 Options(fg; caption, label)
 ```
+
+\newpage
 
 1. _[2 pt]_ The data contains many missing values.
     Clean up the data by using the pass-through filter in JASP.
