@@ -7,13 +7,15 @@ author:
 html-license: <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
 pdf-footer: ""
 tex-license: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
-lang: en-US
-number-sections: true
-linkReferences: true
-link-citations: true
 
-# Only used in PDF.
-titlepage-top: >
+#
+# The options below are only used in the PDF.
+#
+
+# Avoid adding a blank page before each chapter.
+disable-cleardoublepage: true
+
+titlepage-top: |
   \begin{tabular}{l}
   Rik Huijzer \\
   Don van Ravenzwaaij \\
@@ -21,8 +23,7 @@ titlepage-top: >
   University of Groningen
   \end{tabular}
 
-
-titlepage-bottom: >
+titlepage-bottom: |
   \url{https://rikhuijzer.github.io/BayesianAssignment.jl/}
 ---
 
