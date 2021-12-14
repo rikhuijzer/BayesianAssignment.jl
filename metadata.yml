@@ -8,6 +8,8 @@ html-license: <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-
 pdf-footer: ""
 tex-license: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
+bibliography: bibliography.bib
+
 #
 # The options below are only used in the PDF.
 #
