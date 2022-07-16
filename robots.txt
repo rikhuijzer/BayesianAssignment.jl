@@ -1,0 +1,4 @@
+Sitemap: https://example.com/BayesianAssignment.jl/sitemap.xml
+
+User-agent: *
+Disallow:
